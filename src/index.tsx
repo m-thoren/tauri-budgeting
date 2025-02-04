@@ -1,8 +1,7 @@
 import { render } from 'solid-js/web'
 
-import { TodoList } from './todo-list'
-
 import './css/main.css'
+import TransactionForm from './pages/TransactionForm'
 
 const root = document.getElementById('root')
 
@@ -12,4 +11,4 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 	)
 }
 
-render(() => <TodoList />, root!)
+render(() => <TransactionForm />, root!)

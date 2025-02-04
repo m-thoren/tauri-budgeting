@@ -1,17 +1,21 @@
 import { render, fireEvent } from '@solidjs/testing-library'
 
-import { TodoList } from './todo-list'
+import TransactionForm from './TransactionForm'
 import { describe, expect, test } from 'vitest'
 
-describe('<TodoList />', () => {
+describe('<TransactionForm />', () => {
 	test('it will render an text input and a button', () => {
-		const { getByPlaceholderText, getByText } = render(() => <TodoList />)
+		const { getByPlaceholderText, getByText } = render(() => (
+			<TransactionForm />
+		))
 		expect(getByPlaceholderText('new todo here')).toBeInTheDocument()
 		expect(getByText('Add Todo')).toBeInTheDocument()
 	})
 
 	test('it will add a new todo', async () => {
-		const { getByPlaceholderText, getByText } = render(() => <TodoList />)
+		const { getByPlaceholderText, getByText } = render(() => (
+			<TransactionForm />
+		))
 		const input = getByPlaceholderText('new todo here') as HTMLInputElement
 		const button = getByText('Add Todo')
 		input.value = 'test new todo'
@@ -22,7 +26,7 @@ describe('<TodoList />', () => {
 
 	test('it will mark a todo as completed', async () => {
 		const { getByPlaceholderText, findByRole, getByText } = render(() => (
-			<TodoList />
+			<TransactionForm />
 		))
 		const input = getByPlaceholderText('new todo here') as HTMLInputElement
 		const button = getByText('Add Todo') as HTMLButtonElement

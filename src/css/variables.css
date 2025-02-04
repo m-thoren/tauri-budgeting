@@ -1,0 +1,41 @@
+html {
+	--background-lightness: 0%;
+	--background-chroma: 0;
+	--background-hue: 0;
+	--background: oklch(
+		var(--background-lightness) var(--background-chroma)
+			var(--background-hue)
+	);
+
+	--discrete-lightness: 26.04%;
+	--discrete-chroma: 0.0058;
+	--discrete-hue: 196.8;
+	--discrete: oklch(var(--asd-lightness) var(--asd-chroma) var(--asd-hue));
+
+	--primary-lightness: 85.4%;
+	--primary-chroma: 0.2041;
+	--primary-hue: 139.82;
+	--primary: oklch(
+		var(--primary-lightness) var(--primary-chroma) var(--primary-hue)
+	);
+	--primary-hover: oklch(
+		calc(var(--primary-lightness) - 10%) var(--primary-chroma)
+			var(--primary-hue)
+	);
+
+	--secondary-lightness: 96.65%;
+	--secondary-chroma: 0.05818435599352176;
+	--secondary-hue: 144.34996691802593;
+	--secondary: oklch(
+		var(--secondary-lightness) var(--secondary-chroma) var(--secondary-hue)
+	);
+
+	--danger: oklch(62.46% 0.2651 13.76);
+
+	--text: var(--secondary);
+	--text-on-primary: var(--background);
+	--text-on-secondary: var(--background);
+	--text-on-danger: var(--secondary);
+
+	--rounded-primary: 6px;
+}
